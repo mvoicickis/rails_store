@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resource :session
+  resources :passwords, param: :token
   get "/products", to: "products#index"
   post "/products", to: "products#create"
 
